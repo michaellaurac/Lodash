@@ -13,7 +13,10 @@ _ = {
       endValue = tempValue;
     }
     return startValue <= inputNumber && inputNumber < endValue
-  }
+  },
+  words(inputString) {
+    return inputString.split(' ');
+  },
 };
 
 // Do not write or modify code below this line.
