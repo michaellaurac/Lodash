@@ -25,6 +25,9 @@ _ = {
       const extraSpaces = ' '.repeat(targetLength - (halfSpaces.length + stringLength));
       return `${halfSpaces}${inputString}${extraSpaces}`;
     }
+  },
+  has(inputObject, key) {
+    return !(typeof inputObject[key] === 'undefined');
   }
 };
 
