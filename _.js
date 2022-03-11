@@ -49,6 +49,13 @@ _ = {
   },
   dropWhile(inputArray, predicateFunction) {
     return this.drop(inputArray, inputArray.findIndex( (element, index) => !predicateFunction(element, index, inputArray) ));
+  },
+  chunk(inputArray, chunkSize = 1) {
+    let chunkedArray = [];
+    for (let i = 0; i < inputArray.length; i += chunkSize) {
+      chunkedArray.push(inputArray.slice(i, i + chunkSize));
+    }
+    return chunkedArray;
   }
 };
 
