@@ -40,6 +40,12 @@ _ = {
     for (const key in inputObject) {
       if (predicateFunction(inputObject[key])) return key;
     }
+  },
+  drop(inputArray, dropNumber = 1) {
+    if (dropNumber < 1) return inputArray;
+    else if (dropNumber >= inputArray.length) return [];
+    else return inputArray.slice(dropNumber);
+
   }
 };
 
