@@ -30,11 +30,11 @@ _ = {
     return !(typeof inputObject[key] === 'undefined');
   },
   invert(inputObject) {
-    let result = {};
+    let invertedObject = {};
     for (let key in inputObject) {
-      result[inputObject[key]] = key;
+      invertedObject[inputObject[key]] = key;
     };
-    return result;
+    return invertedObject;
   }
 };
 
