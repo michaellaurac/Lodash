@@ -21,13 +21,13 @@ _ = {
     const stringLength = inputString.length;
     if (stringLength >= targetLength) return inputString;
     else {
-      const halfSpaces = ' '.repeat(Math.floor((targetLength - stringLength) / 2));
-      const extraSpaces = ' '.repeat(targetLength - (halfSpaces.length + stringLength));
-      return `${halfSpaces}${inputString}${extraSpaces}`;
+      const startSpaces = ' '.repeat(Math.floor((targetLength - stringLength) / 2));
+      const endSpaces = ' '.repeat(targetLength - (startSpaces.length + stringLength));
+      return `${startSpaces}${inputString}${endSpaces}`;
     }
   },
   has(inputObject, key) {
-    return !(typeof inputObject[key] === 'undefined');
+    return !(inputObject[key] === undefined);
   },
   invert(inputObject) {
     let invertedObject = {};
