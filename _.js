@@ -28,6 +28,13 @@ _ = {
   },
   has(inputObject, key) {
     return !(typeof inputObject[key] === 'undefined');
+  },
+  invert(inputObject) {
+    let result = {};
+    Object.keys(inputObject).reverse().forEach( key => {
+      result[inputObject[key]] = key;
+    });
+    return result;
   }
 };
 
