@@ -22,8 +22,8 @@ _ = {
     if (stringLength >= targetLength) return inputString;
     else {
       const halfSpaces = ' '.repeat(Math.floor((targetLength - stringLength) / 2));
-      const extraSpace = ' '.repeat((targetLength - stringLength) % 2);
-      return `${halfSpaces}${inputString}${halfSpaces}${extraSpace}`;
+      const extraSpaces = ' '.repeat(targetLength - (halfSpaces.length + stringLength));
+      return `${halfSpaces}${inputString}${extraSpaces}`;
     }
   }
 };
