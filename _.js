@@ -1,5 +1,5 @@
 _ = {
-  clamp: function(inputNumber, lowerBound, upperBound) {
+  clamp(inputNumber, lowerBound, upperBound) {
     return lowerBound ? Math.min(Math.max(inputNumber, lowerBound), upperBound) : Math.min(inputNumber, upperBound);
   },
   inRange(inputNumber, startValue, endValue) {
