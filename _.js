@@ -17,6 +17,15 @@ _ = {
   words(inputString) {
     return inputString.split(' ');
   },
+  pad(inputString, targetLength) {
+    const stringLength = inputString.length;
+    if (stringLength >= targetLength) return inputString;
+    else {
+      const halfSpaces = ' '.repeat(Math.floor((targetLength - stringLength) / 2));
+      const extraSpace = ' '.repeat((targetLength - stringLength) % 2);
+      return `${halfSpaces}${inputString}${halfSpaces}${extraSpace}`;
+    }
+  }
 };
 
 // Do not write or modify code below this line.
