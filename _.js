@@ -31,10 +31,15 @@ _ = {
   },
   invert(inputObject) {
     let invertedObject = {};
-    for (let key in inputObject) {
+    for (const key in inputObject) {
       invertedObject[inputObject[key]] = key;
     };
     return invertedObject;
+  },
+  findKey(inputObject, predicateFunction) {
+    for (const key in inputObject) {
+      if (predicateFunction(inputObject[key])) return key;
+    }
   }
 };
 
