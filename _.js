@@ -31,9 +31,9 @@ _ = {
   },
   invert(inputObject) {
     let result = {};
-    Object.keys(inputObject).reverse().forEach( key => {
+    for (let key in inputObject) {
       result[inputObject[key]] = key;
-    });
+    };
     return result;
   }
 };
