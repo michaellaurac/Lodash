@@ -46,6 +46,9 @@ _ = {
     else if (dropNumber >= inputArray.length) return [];
     else return inputArray.slice(dropNumber);
 
+  },
+  dropWhile(inputArray, predicateFunction) {
+    return this.drop(inputArray, inputArray.findIndex( (element, index) => !predicateFunction(element, index, inputArray) ));
   }
 };
 
